@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, HeartHandshake, MessageSquareQuote, Dumbbell } from "lucide-react";
+import { ArrowRight, BarChart3, HeartHandshake, Dumbbell } from "lucide-react";
 import { StatCard } from "@/components/site/StatCard";
 
 export const Route = createFileRoute("/")({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Real Australian stats, peer stories and support links on substance use among teenagers. No spin, no scare tactics.",
+          "Real Australian stats and support links on substance use among teenagers. No spin, no scare tactics.",
       },
     ],
   }),
@@ -23,12 +23,6 @@ export const Route = createFileRoute("/")({
 });
 
 const navCards = [
-  {
-    to: "/stories" as const,
-    icon: MessageSquareQuote,
-    title: "Peer Stories",
-    body: "Anonymous, first-person moments from students — saying no, feeling pressure, changing their mind.",
-  },
   {
     to: "/facts" as const,
     icon: BarChart3,
@@ -72,10 +66,10 @@ function Home() {
               See the data <ArrowRight className="size-4" />
             </Link>
             <Link
-              to="/stories"
+              to="/help"
               className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 font-semibold transition-colors hover:bg-primary-foreground/10"
             >
-              Read peer stories
+              Get help
             </Link>
           </div>
 
@@ -100,7 +94,7 @@ function Home() {
           <div>
             <p className="eyebrow text-secondary">Start anywhere</p>
             <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
-              Four ways in
+              Three ways in
             </h2>
           </div>
           <p className="max-w-md text-sm text-muted-foreground">
@@ -108,7 +102,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {navCards.map((c) => (
             <Link
               key={c.to}
