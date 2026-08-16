@@ -66,10 +66,10 @@ function Home() {
               See the data <ArrowRight className="size-4" />
             </Link>
             <Link
-              to="/stories"
+              to="/help"
               className="inline-flex items-center gap-2 rounded-md border border-primary-foreground/30 px-6 py-3 font-semibold transition-colors hover:bg-primary-foreground/10"
             >
-              Read peer stories
+              Get help
             </Link>
           </div>
 
