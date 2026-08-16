@@ -8,7 +8,7 @@ export function SiteFooter() {
           <p className="font-display text-2xl font-bold text-primary">Unfiltered</p>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">
             A youth health awareness project built by Year 11 students for a school health
-            forum. Real numbers, real stories, no spin.
+            forum. Real numbers, no spin.
           </p>
         </div>
         <div>
