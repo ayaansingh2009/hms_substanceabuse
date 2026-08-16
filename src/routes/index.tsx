@@ -94,7 +94,7 @@ function Home() {
           <div>
             <p className="eyebrow text-secondary">Start anywhere</p>
             <h2 className="mt-3 text-3xl font-bold text-primary md:text-4xl">
-              Four ways in
+              Three ways in
             </h2>
           </div>
           <p className="max-w-md text-sm text-muted-foreground">
@@ -102,7 +102,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {navCards.map((c) => (
             <Link
               key={c.to}
