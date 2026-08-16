@@ -14,7 +14,6 @@ import { Route as FactsRouteImport } from './routes/facts'
 import { Route as HelpRouteImport } from './routes/help'
 import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as SportRouteImport } from './routes/sport'
-import { Route as StoriesRouteImport } from './routes/stories'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -41,11 +40,6 @@ const SportRoute = SportRouteImport.update({
   path: '/sport',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StoriesRoute = StoriesRouteImport.update({
-  id: '/stories',
-  path: '/stories',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +47,6 @@ export interface FileRoutesByFullPath {
   '/help': typeof HelpRoute
   '/schools': typeof SchoolsRoute
   '/sport': typeof SportRoute
-  '/stories': typeof StoriesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +54,6 @@ export interface FileRoutesByTo {
   '/help': typeof HelpRoute
   '/schools': typeof SchoolsRoute
   '/sport': typeof SportRoute
-  '/stories': typeof StoriesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,14 +62,13 @@ export interface FileRoutesById {
   '/help': typeof HelpRoute
   '/schools': typeof SchoolsRoute
   '/sport': typeof SportRoute
-  '/stories': typeof StoriesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/facts' | '/help' | '/schools' | '/sport' | '/stories'
+  fullPaths: '/' | '/facts' | '/help' | '/schools' | '/sport'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/facts' | '/help' | '/schools' | '/sport' | '/stories'
-  id: '__root__' | '/' | '/facts' | '/help' | '/schools' | '/sport' | '/stories'
+  to: '/' | '/facts' | '/help' | '/schools' | '/sport'
+  id: '__root__' | '/' | '/facts' | '/help' | '/schools' | '/sport'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -86,7 +77,6 @@ export interface RootRouteChildren {
   HelpRoute: typeof HelpRoute
   SchoolsRoute: typeof SchoolsRoute
   SportRoute: typeof SportRoute
-  StoriesRoute: typeof StoriesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -126,13 +116,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SportRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/stories': {
-      id: '/stories'
-      path: '/stories'
-      fullPath: '/stories'
-      preLoaderRoute: typeof StoriesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -142,18 +125,7 @@ const rootRouteChildren: RootRouteChildren = {
   HelpRoute: HelpRoute,
   SchoolsRoute: SchoolsRoute,
   SportRoute: SportRoute,
-  StoriesRoute: StoriesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
