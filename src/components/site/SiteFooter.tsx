@@ -20,11 +20,6 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link to="/stories" className="hover:text-accent">
-                Peer Stories
-              </Link>
-            </li>
-            <li>
               <Link to="/sport" className="hover:text-accent">
                 Sport &amp; Steroids
               </Link>

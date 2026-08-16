@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, BarChart3, HeartHandshake, MessageSquareQuote, Dumbbell } from "lucide-react";
+import { ArrowRight, BarChart3, HeartHandshake, Dumbbell } from "lucide-react";
 import { StatCard } from "@/components/site/StatCard";
 
 export const Route = createFileRoute("/")({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Real Australian stats, peer stories and support links on substance use among teenagers. No spin, no scare tactics.",
+          "Real Australian stats and support links on substance use among teenagers. No spin, no scare tactics.",
       },
     ],
   }),
@@ -23,12 +23,6 @@ export const Route = createFileRoute("/")({
 });
 
 const navCards = [
-  {
-    to: "/stories" as const,
-    icon: MessageSquareQuote,
-    title: "Peer Stories",
-    body: "Anonymous, first-person moments from students — saying no, feeling pressure, changing their mind.",
-  },
   {
     to: "/facts" as const,
     icon: BarChart3,
