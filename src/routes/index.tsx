@@ -5,17 +5,17 @@ import { StatCard } from "@/components/site/StatCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Unfiltered — What teens actually do, in real numbers" },
+      { title: "Unfiltered" },
       {
         name: "description",
         content:
-          "A student-made health project using real Australian data on vaping, alcohol and drugs. Most teens overestimate how many of their peers use. Here's what's actually normal.",
+          "HMS Assingment",
       },
-      { property: "og:title", content: "Unfiltered — You're not the only one who's noticed" },
+      { property: "og:title", content: "Unfiltered" },
       {
         property: "og:description",
         content:
-          "Real Australian stats and support links on substance use among teenagers. No spin, no scare tactics.",
+          "HMS Assingment",
       },
     ],
   }),

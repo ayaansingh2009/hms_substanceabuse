@@ -81,21 +81,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Unfiltered — real numbers on teen substance use" },
+      { title: "Unfiltered" },
       {
         name: "description",
         content:
-          "A student-made health awareness project using real Australian data on vaping, alcohol and drugs.",
+          "HMS Assingment",
       },
       { name: "author", content: "Unfiltered — Year 11 health forum project" },
       { property: "og:title", content: "Unfiltered" },
       {
         property: "og:description",
         content:
-          "Real Australian stats and support links on substance use among teenagers.",
+          "HMS Assingment",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Unfiltered" },
+      { name: "twitter:description", content: "HMS Assingment" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/069bcdc17fc9331fe496ec11ad7c7923/id-preview-f61278d2--55915b3d-59c3-468f-9184-656e55d7aafc.lovable.app-1786871974428.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/069bcdc17fc9331fe496ec11ad7c7923/id-preview-f61278d2--55915b3d-59c3-468f-9184-656e55d7aafc.lovable.app-1786871974428.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
